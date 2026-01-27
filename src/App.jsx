@@ -29,19 +29,19 @@ const getDefaultIntentCounts = (pkgId) => {
 }
 
 const INDUSTRIES = [
-  { id: 'very_cold', name: '非常冷门' },
-  { id: 'cold', name: '冷门' },
-  { id: 'regular', name: '常规' },
-  { id: 'hot', name: '激烈' },
-  { id: 'very_hot', name: '特别激烈' },
+  { id: 'very_cold', name: '非常冷门', priceRange: '￥2000~2500/意图/平台/月' },
+  { id: 'cold', name: '冷门', priceRange: '￥2500~3000/意图/平台/月' },
+  { id: 'regular', name: '常规', priceRange: '￥3000~4000/意图/平台/月' },
+  { id: 'hot', name: '激烈', priceRange: '￥4000~8000/意图/平台/月' },
+  { id: 'very_hot', name: '特别激烈', priceRange: '￥8000以上/意图/平台/月' },
 ]
 
 const K_TABLE = {
-  非常冷门: { 尾部: 1.2, 腰部: 1.0, 头部: 1.0 },
-  冷门: { 尾部: 1.4, 腰部: 1.2, 头部: 1.1 },
-  常规: { 尾部: 1.8, 腰部: 1.4, 头部: 1.2 },
-  激烈: { 尾部: 2.0, 腰部: 1.8, 头部: 1.4 },
-  特别激烈: { 尾部: 2.5, 腰部: 2.0, 头部: 1.5 },
+  非常冷门: { 尾部: 1.25, 腰部: 1.0, 头部: 1.0 },
+  冷门: { 尾部: 1.5, 腰部: 1.25, 头部: 1.25 },
+  常规: { 尾部: 2.0, 腰部: 1.75, 头部: 1.5 },
+  激烈: { 尾部: 4.0, 腰部: 3.0, 头部: 2.0 },
+  特别激烈: { 尾部: 10, 腰部: 7, 头部: 4 },
 }
 
 const formatPrice = (price) => new Intl.NumberFormat('zh-CN', { style: 'currency', currency: 'CNY', maximumFractionDigits: 0 }).format(price)
@@ -289,7 +289,7 @@ function App() {
             {INDUSTRIES.map(d => (
               <button key={d.id} onClick={() => setIndustry(d)} className={`p-4 rounded-xl border text-left transition-all duration-200 ${industry.id===d.id?'bg-zinc-800 border-brand-500 text-white shadow-lg shadow-brand-900/10':'bg-[#121215] border-zinc-800 text-zinc-500 hover:border-zinc-600 hover:text-zinc-300'}`}>
                 <div className="font-semibold mb-1">{d.name}</div>
-                <div className="text-[10px] leading-tight opacity-50">{d.name}</div>
+                <div className="text-[10px] leading-tight opacity-50">{d.priceRange}</div>
               </button>
             ))}
           </div>
