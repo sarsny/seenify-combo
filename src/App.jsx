@@ -234,7 +234,7 @@ function App() {
                   </div>
                   <div className="text-right">
                   <div className="text-4xl font-bold text-white tracking-tight">{formatPrice(monthlyPrice)} / 月</div>
-                    <div className="text-xs text-zinc-500 mt-1 line-through decoration-brand-500 decoration-2">原价 {formatPrice(kValue * 2000 * totalPlatformCount * totalIntentCount)} / 月</div>
+                    <div className="text-xs text-zinc-500 mt-1 line-through decoration-brand-500 decoration-2">原价 {formatPrice(2000 * totalPlatformCount * (kValue * (recommendIntentCount + compareIntentCount) + researchIntentCount))} / 月</div>
                     <div className="text-xs text-brand-400 mt-1">扩展月费 +{formatPrice(extensionMonthly)} / 月</div>
                     <div className="text-xs text-brand-300 mt-1">加油包费用 +{formatPrice(boostersPart)}</div>
                     <div className="text-sm text-zinc-400 mt-2">总价 <span className="text-white font-medium">{formatPrice(totalPrice)}</span></div>
@@ -550,7 +550,7 @@ function App() {
             <div>
               <div className="text-xs text-zinc-400">月均投入</div>
               <div className="text-2xl font-bold text-white">{formatPrice(monthlyPrice)} / 月</div>
-              <div className="text-[10px] text-zinc-500 line-through decoration-brand-500">原价 {formatPrice((selectedPkg.msrp * kValue) / selectedPkg.months)} / 月</div>
+              <div className="text-[10px] text-zinc-500 line-through decoration-brand-500">原价 {formatPrice(2000 * totalPlatformCount * (kValue * (recommendIntentCount + compareIntentCount) + researchIntentCount))} / 月</div>
             </div>
             <div className="text-right">
               <div className="text-xs text-zinc-400">总价</div>
