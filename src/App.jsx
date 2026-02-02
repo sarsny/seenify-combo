@@ -214,9 +214,9 @@ function App() {
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-2">
             <div className="text-brand-500">⚡</div>
-            <h1 className="text-2xl font-bold tracking-tight">犀帆 SEENIFY <span className="text-brand-500">AIO</span></h1>
+            <h1 className="text-2xl font-bold tracking-tight">犀帆 SEENIFY <span className="text-brand-500">AEO</span></h1>
           </div>
-          <p className="text-zinc-400 text-sm">AI 可见性优化配置终端</p>
+          <p className="text-zinc-400 text-sm">服务价格计算器</p>
         </div>
 
         <div className="flex-1 flex items-center justify-center py-8">
@@ -562,7 +562,7 @@ function App() {
             <span>生成方案与合同</span>
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </button>
-          <p className="text-center text-[10px] text-zinc-600 mt-4">点击即表示您同意《犀帆AIO服务条款》。K 值最终解释权归犀帆所有。</p>
+          <p className="text-center text-[10px] text-zinc-600 mt-4">点击即表示您同意《犀帆AEO服务条款》。K 值最终解释权归犀帆所有。</p>
         </div>
       </div>
     </div>
